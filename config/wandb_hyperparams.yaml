@@ -1,0 +1,16 @@
+program: train.py
+method: random
+metric:
+  goal: minimize
+  name: train/total_loss
+parameters:
+  dropout:
+    values: [0.25, 0.4, 0.6]
+  hidden_dim:
+    values: [10, 25, 50]
+  learning_rate:
+    values: [0.001, 0.005, 0.0005]
+  optimizer_type:
+    values: ["adam", "sgd"]
+  epochs:
+    value: 125
